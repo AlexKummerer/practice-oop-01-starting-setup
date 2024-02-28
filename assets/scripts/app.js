@@ -170,21 +170,22 @@ class App {
     finishedProjectsList.setSwitchHandlerFunction(
       activeProjectsList.addProject.bind(activeProjectsList)
     );
+
     const someScript = document.querySelector("script");
     someScript.textContent = "alert('Hi there!');";
     document.head.append(someScript);
 
-    
 
-
-
-
-    document.getElementById("start-analytics-btn").addEventListener("click", () => {
-      const analyticsScript = document.createElement("script");
-      analyticsScript.src = "assets/scripts/analytics.js";
-      analyticsScript.defer = true;
-      document.head.append(analyticsScript);
-    });
+    const timerId = setTimeout(this.startAnalytics, 3000);
+    document
+      .getElementById("stop-analytics-btn")
+      .addEventListener("click", () => clearTimeout(timerId));
+  }
+  static startAnalytics() {
+    const analyticsScript = document.createElement("script");
+    analyticsScript.src = "assets/scripts/analytics.js";
+    analyticsScript.defer = true;
+    document.head.append(analyticsScript);
   }
 }
 
