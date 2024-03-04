@@ -1,0 +1,32 @@
+{
+  "name": "practice-oop-01-starting-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "js test",
+    "build": "webpack",
+    "build:dev": "webpack-dev-server",
+    "build:prod": "webpack --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKummerer/practice-oop-01-starting-setup.git"
+  },
+  "author": "Alexander Kummerer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexKummerer/practice-oop-01-starting-setup/issues"
+  },
+  "homepage": "https://github.com/AlexKummerer/practice-oop-01-starting-setup#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.57.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

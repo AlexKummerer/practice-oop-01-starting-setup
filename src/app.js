@@ -1,9 +1,17 @@
-import { ProjectList } from "./App/ProjectList.js";
+import { ProjectList } from "./App/ProjectList";
+import * as _ from "lodash";
+// import { DEFAULT_VALUE } from "./App/Utility/Utility";
+
+
+
+
 
 class App {
   static init() {
+    console.log(_.difference([1, 2, 3], [2, 3, 4]));
     const activeProjectsList = new ProjectList("active");
     const finishedProjectsList = new ProjectList("finished");
+    l
     activeProjectsList.setSwitchHandlerFunction(
       finishedProjectsList.addProject.bind(finishedProjectsList)
     );
@@ -22,7 +30,7 @@ class App {
   }
   static startAnalytics() {
     const analyticsScript = document.createElement("script");
-    analyticsScript.src = "assets/scripts/analytics.js";
+    analyticsScript.src = "/src/Utility/Analytics.js";
     analyticsScript.defer = true;
     document.head.append(analyticsScript);
   }
